@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To ARMY 💜 BTS</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #b8a0e8;
+    --deep: #20172e;
+    --pink: #f5dafa;
+    --white: #fffaff;
+}
+
+body {
+    font-family: Cambria, Georgia, serif;
+    background:
+        radial-gradient(circle at top, #614781 0%, #251b38 45%, #110e19 100%);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    color: #f4ddff;
+    animation: twinkle 2.5s infinite ease-in-out;
+    opacity: .7;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: .15; transform: scale(.7); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+.container {
+    width: min(92%, 760px);
+    margin: 0 auto;
+    padding: 35px 0 30px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.tag {
+    display: inline-block;
+    border: 1px solid #cdb6f5;
+    color: #eadfff;
+    border-radius: 30px;
+    padding: 8px 18px;
+    letter-spacing: 3px;
+    font: 11px Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(42px, 10vw, 76px);
+    letter-spacing: 5px;
+    line-height: 1.1;
+    color: #fff;
+    text-shadow: 0 0 22px #c9a5ff;
+}
+
+.subtitle {
+    color: #e3cffa;
+    margin-top: 12px;
+    font: 12px Arial, sans-serif;
+    letter-spacing: 4px;
+}
+
+.divider {
+    width: 75px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #e8c7ff, transparent);
+    margin: 24px auto;
+}
+
+.intro {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #f3eafb;
+    max-width: 570px;
+    margin: 0 auto 25px;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.photo-card {
+    padding: 8px;
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(226,205,255,.4);
+    border-radius: 17px;
+    box-shadow: 0 8px 28px rgba(0,0,0,.22);
+    transition: transform .3s;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+}
+
+.photo-card img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 11px;
+    display: block;
+}
+
+.photo-caption {
+    padding: 12px 3px 6px;
+    font-size: 15px;
+    color: #ead9ff;
+}
+
+.message {
+    text-align: left;
+    padding: 25px 22px;
+    margin-top: 28px;
+    border-radius: 18px;
+    border: 1px solid rgba(224,197,255,.35);
+    background: rgba(255,255,255,.07);
+    box-shadow: 0 10px 35px rgba(0,0,0,.15);
+}
+
+.message h2 {
+    color: #e3c5ff;
+    font-size: 25px;
+    margin-bottom: 17px;
+    text-align: center;
+}
+
+.message p {
+    color: #f8f0ff;
+    line-height: 1.9;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.signature {
+    text-align: right;
+    color: #e4c5ff !important;
+    font-style: italic;
+}
+
+.music-box {
+    margin: 25px auto 0;
+    padding: 17px;
+    border-radius: 18px;
+    background: rgba(183,151,224,.13);
+    border: 1px solid rgba(231,211,255,.25);
+}
+
+.music-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.music-title {
+    margin-bottom: 13px;
+    color: #f1e1ff;
+}
+
+button {
+    font-family: Arial, sans-serif;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #e9d5ff, #b69ae7);
+    color: #28183b;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(.97);
+}
+
+#musicStatus {
+    color: #d9c5f5;
+    font: 12px Arial, sans-serif;
+    margin-top: 12px;
+}
+
+footer {
+    margin-top: 28px;
+    color: #cbb6e4;
+    font: 11px Arial, sans-serif;
+    letter-spacing: 2px;
+    line-height: 2;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    pointer-events: none;
+    z-index: 2;
+    animation: floatUp 6s linear forwards;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) rotate(0); opacity: 0; }
+    15% { opacity: .8; }
+    100% { transform: translateY(-110vh) rotate(35deg); opacity: 0; }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding-top: 27px;
+    }
+
+    .photos {
+        gap: 10px;
+    }
+
+    .photo-card {
+        padding: 5px;
+    }
+
+    .photo-caption {
+        font-size: 12px;
+    }
+
+    .message {
+        padding: 21px 17px;
+    }
+
+    .message p {
+        font-size: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<main class="container">
+
+    <div class="tag">A LITTLE GIFT FOR ARMY</div>
+
+    <h1>BTS</h1>
+    <div class="subtitle">BEYOND THE SCENE · PURPLE FOREVER</div>
+
+    <div class="divider"></div>
+
+    <p class="intro">
+        Có những người mình chưa từng gặp ngoài đời,
+        nhưng âm nhạc của họ lại khiến thế giới của mình
+        trở nên dịu dàng và nhiều màu sắc hơn. 💜
+    </p>
+
+    <!-- HAI ẢNH BTS -->
+    <section class="photos">
+
+        <div class="photo-card">
+            <img src="bts1.jpg" alt="Ảnh BTS số 1">
+            <div class="photo-caption">My favorite seven 💜</div>
+        </div>
+
+        <div class="photo-card">
+            <img src="bts2.jpg" alt="Ảnh BTS số 2">
+            <div class="photo-caption">Forever with ARMY ✨</div>
+        </div>
+
+    </section>
+
+    <!-- LỜI NHẮN -->
+    <section class="message">
+
+        <h2>Youth is never coming back, but we are Young Forever </h2>
+
+        
+
+    </section>
+
+    <!-- NHẠC NỀN -->
+    <section class="music-box">
+        <div class="music-icon">🎵</div>
+        <div class="music-title">A song just for you</div>
+
+        <audio id="bgMusic" loop preload="metadata">
+            <source src="music.mp3" type="audio/mpeg">
+            Trình duyệt của bạn không hỗ trợ phát nhạc.
+        </audio>
+
+        <button id="musicBtn" type="button">
+            ▶ Play our song
+        </button>
+
+        <p id="musicStatus">
+            Chạm nút để bắt đầu phát nhạc 💜
+        </p>
+    </section>
+
+    <footer>
+        MADE WITH LOVE & PURPLE HEARTS<br>
+        BTS × ARMY · FOREVER 💜
+    </footer>
+
+</main>
+
+<script>
+// TẠO SAO LẤP LÁNH
+const starBox = document.getElementById("stars");
+
+for (let i = 0; i < 38; i++) {
+    const star = document.createElement("span");
+    star.className = "star";
+    star.textContent = Math.random() > 0.5 ? "✦" : "·";
+    star.style.left = Math.random() * 100 + "%";
+    star.style.top = Math.random() * 100 + "%";
+    star.style.fontSize = (8 + Math.random() * 13) + "px";
+    star.style.animationDelay = Math.random() * 3 + "s";
+    starBox.appendChild(star);
+}
+
+// NÚT BẬT / TẮT NHẠC
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+const musicStatus = document.getElementById("musicStatus");
+
+musicBtn.addEventListener("click", async () => {
+    if (music.paused) {
+        try {
+            await music.play();
+            musicBtn.textContent = "❚❚ Pause music";
+            musicStatus.textContent = "Đang phát nhạc dành cho bạn 💜";
+        } catch (error) {
+            musicStatus.textContent =
+                "Không phát được nhạc. Hãy kiểm tra file music.mp3 nhé!";
+        }
+    } else {
+        music.pause();
+        musicBtn.textContent = "▶ Play our song";
+        musicStatus.textContent = "Nhạc đã tạm dừng 💜";
+    }
+});
+
+// HIỆU ỨNG TRÁI TIM BAY
+function createHeart() {
+    const heart = document.createElement("span");
+    heart.className = "heart";
+    heart.textContent = Math.random() > 0.5 ? "💜" : "♡";
+    heart.style.left = Math.random() * 100 + "%";
+    heart.style.fontSize = (13 + Math.random() * 13) + "px";
+    heart.style.animationDuration = (5 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 9500);
+}
+
+setInterval(createHeart, 1000);
+</script>
+
+</body>
+</html>
